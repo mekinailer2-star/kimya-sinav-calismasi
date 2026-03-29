@@ -1307,6 +1307,101 @@ body {
     flex-shrink: 0;
 }
 
+/* === Reference Tables === */
+.reference-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+.reference-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    min-width: 500px;
+}
+.reference-table thead {
+    background: var(--accent);
+    color: #fff;
+}
+.reference-table th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.reference-table td {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-primary);
+}
+.reference-table tbody tr:last-child td {
+    border-bottom: none;
+}
+.reference-table tbody tr:nth-child(even) {
+    background: var(--bg-tertiary);
+}
+.reference-table tbody tr:hover {
+    background: rgba(108, 92, 231, 0.08);
+}
+[data-theme="dark"] .reference-table tbody tr:hover {
+    background: rgba(108, 92, 231, 0.15);
+}
+.reference-table.compact td,
+.reference-table.compact th {
+    padding: 8px 14px;
+}
+.c-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+.formula-cell {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+/* === Structure List (Yapı Formulleri) === */
+.structure-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+}
+.structure-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: var(--bg-tertiary);
+    border-radius: 10px;
+    border-left: 4px solid var(--accent);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.structure-item:hover {
+    transform: translateX(4px);
+    box-shadow: 0 2px 8px rgba(108, 92, 231, 0.15);
+}
+.struct-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+.struct-formula {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
 /* === Animations === */
 .animate-on-scroll {
     opacity: 0;
