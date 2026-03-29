@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="12. Sinif 2. Donem 1. Yazili - Kimya Sinav Calisma Notlari">
+    <meta name="theme-color" content="#6c5ce7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Kimya Notlari">
+    <title>Kimya Sinav Calismasi | 12. Sinif</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192x192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="atom-spinner">
+                <div class="electron"></div>
+                <div class="electron"></div>
+                <div class="electron"></div>
+                <div class="nucleus"></div>
+            </div>
+            <p class="loader-text">Kimya Notlari Yukleniyor...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-icon">&#9883;</span>
+                <span class="logo-text">Kimya<span class="accent">12</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">Ana Sayfa</a></li>
+                <li><a href="#hibrit" class="nav-link">Hibritleşme</a></li>
+                <li><a href="#sigma-pi" class="nav-link">Sigma-Pi</a></li>
+                <li><a href="#alkan-alken" class="nav-link">Alkan-Alken</a></li>
+                <li><a href="#alkin" class="nav-link">Alkin</a></li>
+                <li><a href="#quiz" class="nav-link">Quiz</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Tema Degistir">
+                    <span class="theme-icon sun">&#9728;</span>
+                    <span class="theme-icon moon">&#9790;</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span class="logo-icon">&#9883;</span>
+            <span class="logo-text">Kimya<span class="accent">12</span></span>
+            <button class="sidebar-close" id="sidebarClose">&times;</button>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="#hero" class="sidebar-link">&#127968; Ana Sayfa</a></li>
+            <li><a href="#hibrit" class="sidebar-link">&#9883; Hibritleşme</a></li>
+            <li><a href="#sigma-pi" class="sidebar-link">&#128279; Sigma-Pi Bağları</a></li>
+            <li><a href="#alkan-alken" class="sidebar-link">&#128300; Alkan-Alken</a></li>
+            <li><a href="#alkin" class="sidebar-link">&#9878; Alkin</a></li>
+            <li><a href="#quiz" class="sidebar-link">&#128221; Quiz</a></li>
+        </ul>
+    </aside>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-badge">12. Sinif &bull; 2. Donem &bull; 1. Yazili</div>
+            <h1 class="hero-title">
+                Kimya Sinav<br>
+                <span class="gradient-text">Calisma Notlari</span>
+            </h1>
+            <p class="hero-subtitle">Organik kimya konularinda hibritleşme, sigma-pi bağları, alkan-alken ve alkin adlandırma konularını iceren kapsamli calisma rehberi.</p>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Soru Tipi</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Ana Konu</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Ornek</span>
+                </div>
+            </div>
+            <a href="#hibrit" class="hero-cta">
+                Calisma'ya Basla
+                <span class="cta-arrow">&#8595;</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Section 1: Hibritleşme -->
+    <section class="section" id="hibrit">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">Hibritleşme</h2>
+                <p class="section-desc">sp, sp<sup>2</sup>, sp<sup>3</sup> hibritleşme turleri ve ozellikleri</p>
+            </div>
+
+            <div class="content-grid">
+                <!-- Hybridization Types Card -->
+                <div class="card card-full animate-on-scroll">
+                    <div class="card-header">
+                        <span class="card-icon">&#9883;</span>
+                        <h3>Hibritleşme Turleri</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="hybridization-grid">
+                            <div class="hybrid-card sp3">
+                                <div class="hybrid-badge">sp<sup>3</sup></div>
+                                <div class="hybrid-info">
+                                    <p><strong>Bağ Tipi:</strong> Sadece tekli bağ (sigma)</p>
+                                    <p><strong>Geometri:</strong> Duzgun dort yuzlu (Tetrahedral)</p>
+                                    <p><strong>Bağ Acisi:</strong> 109.5&deg;</p>
+                                    <p><strong>Ornek:</strong> CH<sub>4</sub>, C<sub>2</sub>H<sub>6</sub></p>
+                                </div>
+                            </div>
+                            <div class="hybrid-card sp2">
+                                <div class="hybrid-badge">sp<sup>2</sup></div>
+                                <div class="hybrid-info">
+                                    <p><strong>Bağ Tipi:</strong> Cift bağ iceren (1 sigma + 1 pi)</p>
+                                    <p><strong>Geometri:</strong> Duzlem ucgen (Trigonal planar)</p>
+                                    <p><strong>Bağ Acisi:</strong> 120&deg;</p>
+                                    <p><strong>Ornek:</strong> C<sub>2</sub>H<sub>4</sub> (Etilen)</p>
+                                </div>
+                            </div>
+                            <div class="hybrid-card sp">
+                                <div class="hybrid-badge">sp</div>
+                                <div class="hybrid-info">
+                                    <p><strong>Bağ Tipi:</strong> Uclu bağ iceren (1 sigma + 2 pi)</p>
+                                    <p><strong>Geometri:</strong> Doğrusal (Linear)</p>
+                                    <p><strong>Bağ Acisi:</strong> 180&deg;</p>
+                                    <p><strong>Ornek:</strong> C<sub>2</sub>H<sub>2</sub> (Asetilen)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Rules -->
+                <div class="card animate-on-scroll">
+                    <div class="card-header">
+                        <span class="card-icon">&#128161;</span>
+                        <h3>Onemli Kurallar</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="info-list">
+                            <li>
+                                <span class="list-icon">&#10148;</span>
+                                <span>Cin sayısındaki bağların <strong>hepsi</strong> hesaplanır</span>
+                            </li>
+                            <li>
+                                <span class="list-icon">&#10148;</span>
+                                <span>2'li bağ olan karbon atomu <strong>sp<sup>2</sup></strong> hibritleşmesi yapar</span>
+                            </li>
+                            <li>
+                                <span class="list-icon">&#10148;</span>
+                                <span>3'lu bağ olan karbon atomu <strong>sp</strong> hibritleşmesi yapar</span>
+                            </li>
+                            <li>
+                                <span class="list-icon">&#10148;</span>
+                                <span>Tekli bağ olan karbon atomu <strong>sp<sup>3</sup></strong> hibritleşmesi yapar</span>
+                            </li>
+                            <li>
+                                <span class="list-icon">&#10148;</span>
+                                <span>Cin (konjuge) sayısı icin <strong>&ge; sp<sup>2</sup></strong> olan karbonlar sayılır</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Example -->
+                <div class="card animate-on-scroll">
+                    <div class="card-header">
+                        <span class="card-icon">&#128196;</span>
+                        <h3>Ornek Soru</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="example-box">
+                            <p class="example-question">Asagidaki bilesikteki her karbon atomunun hibritleşme turunu belirleyiniz:</p>
+                            <div class="formula-display">
+                                <span class="formula-large">
+                                    CH<sub>2</sub>=CH&ndash;CH<sub>2</sub>&ndash;CH=CH&ndash;CH<sub>2</sub>&ndash;C&equiv;CH
+                                </span>
+                            </div>
+                            <div class="hybridization-labels">
+                                <div class="h-label"><span class="h-pos">C1</span><span class="h-type sp2-tag">sp<sup>2</sup></span></div>
+                                <div class="h-label"><span class="h-pos">C2</span><span class="h-type sp2-tag">sp<sup>2</sup></span></div>
+                                <div class="h-label"><span class="h-pos">C3</span><span class="h-type sp3-tag">sp<sup>3</sup></span></div>
+                                <div class="h-label"><span class="h-pos">C4</span><span class="h-type sp2-tag">sp<sup>2</sup></span></div>
+                                <div class="h-label"><span class="h-pos">C5</span><span class="h-type sp2-tag">sp<sup>2</sup></span></div>
+                                <div class="h-label"><span class="h-pos">C6</span><span class="h-type sp3-tag">sp<sup>3</sup></span></div>
+                                <div class="h-label"><span class="h-pos">C7</span><span class="h-type sp-tag">sp</span></div>
+                                <div class="h-label"><span class="h-pos">C8</span><span class="h-type sp-tag">sp</span></div>
+                            </div>
+                            <div class="note-box">
+                                <strong>Not:</strong> Bu bilesik 1 tane cin (konjuge) sisteme sahiptir. 2'li bağ olan karbonlar sp<sup>2</sup>, 3'lu bağ olan karbonlar sp, tekli bağ olan karbonlar sp<sup>3</sup> hibritleşmesi yapar.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Sigma - Pi Bağı Sayısı -->
+    <section class="section section-alt" id="sigma-pi">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Sigma &ndash; Pi Bağı Sayısı</h2>
+                <p class="section-desc">Molekullerdeki sigma ve pi bağ sayılarının hesaplanması</p>
+            </div>
+
+            <div class="content-grid">
+                <!-- Rules Card -->
+                <div class="card animate-on-scroll">
+                    <div class="card-header">
+                        <span class="card-icon">&#128218;</span>
+                        <h3>Temel Kurallar</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="info-list">
+                            <li>
+                                <span class="list-icon">&#10148;</span>
+                                <span>Her bağdaki <strong>1. bağ</strong> daima <strong>sigma (&#963;)</strong> bağıdır</span>
+                            </li>
+                            <li>
+                                <span class="list-icon">&#10148;</span>
+                                <span><strong>2. ve 3. bağlar</strong> pi (&#960;) bağlarıdır</span>
+                            </li>
+                            <li>
+                                <span class="list-icon">&#10148;</span>
+                                <span>Cift bağda: <strong>1 sigma + 1 pi</strong> bağı vardır</span>
+                            </li>
+                            <li>
+                                <span class="list-icon">&#10148;</span>
+                                <span>Uclu bağda: <strong>1 sigma + 2 pi</strong> bağı vardır</span>
+                            </li>
+                        </ul>
+
+                        <div class="formula-box">
+                            <h4>Hesaplama Formulu</h4>
+                            <div class="formula-highlight">
+                                <p>Toplam Atom Sayısı &minus; 1 = <strong>Sigma Bağ Sayısı</strong></p>
+                            </div>
+                            <p class="formula-note">(Sadece acık zincirli bilesikler icin gecerlidir)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bond Types Visual -->
+                <div class="card animate-on-scroll">
+                    <div class="card-header">
+                        <span class="card-icon">&#128279;</span>
+                        <h3>Bağ Turleri</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="bond-types">
+                            <div class="bond-type">
+                                <div class="bond-visual single">
+                                    <span class="bond-line"></span>
+                                </div>
+                                <div class="bond-info">
+                                    <h4>Tekli Bağ</h4>
+                                    <p>1 Sigma (&#963;)</p>
+                                    <p class="bond-detail">0 Pi (&#960;)</p>
+                                </div>
+                            </div>
+                            <div class="bond-type">
+                                <div class="bond-visual double">
+                                    <span class="bond-line"></span>
+                                    <span class="bond-line"></span>
+                                </div>
+                                <div class="bond-info">
+                                    <h4>Cift Bağ</h4>
+                                    <p>1 Sigma (&#963;)</p>
+                                    <p class="bond-detail">1 Pi (&#960;)</p>
+                                </div>
+                            </div>
+                            <div class="bond-type">
+                                <div class="bond-visual triple">
+                                    <span class="bond-line"></span>
+                                    <span class="bond-line"></span>
+                                    <span class="bond-line"></span>
+                                </div>
+                                <div class="bond-info">
+                                    <h4>Uclu Bağ</h4>
+                                    <p>1 Sigma (&#963;)</p>
+                                    <p class="bond-detail">2 Pi (&#960;)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example -->
+                <div class="card card-full animate-on-scroll">
+                    <div class="card-header">
+                        <span class="card-icon">&#128196;</span>
+                        <h3>Ornek Soru</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="example-box">
+                            <p class="example-question">Asagidaki bilesikteki sigma ve pi bağ sayılarını bulunuz:</p>
+                            <div class="formula-display">
+                                <span class="formula-large">
+                                    CH&equiv;C&ndash;CH<sub>2</sub>&ndash;CH&equiv;C&ndash;CH<sub>3</sub>
+                                </span>
+                            </div>
+                            <div class="solution-grid">
+                                <div class="solution-step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Pi Bağ Sayısı</h4>
+                                        <p>2 tane uclu bağ var &rarr; Her uclu bağda 2 pi bağı var</p>
+                                        <p class="step-result">2 &times; 2 = <strong>4 pi bağı</strong></p>
+                                    </div>
+                                </div>
+                                <div class="solution-step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Toplam Atom Sayısı</h4>
+                                        <p>C: 6 + H: 6 = Toplam <strong>12 atom</strong></p>
+                                    </div>
+                                </div>
+                                <div class="solution-step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Sigma Bağ Sayısı</h4>
+                                        <p>Toplam Atom Sayısı &minus; 1</p>
+                                        <p class="step-result">12 &minus; 1 = <strong>11 sigma bağı</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="result-summary">
+                                <div class="result-item">
+                                    <span class="result-label">Sigma (&#963;) Bağı</span>
+                                    <span class="result-value">11</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">Pi (&#960;) Bağı</span>
+                                    <span class="result-value">4</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">Toplam Bağ</span>
+                                    <span class="result-value">15</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Alkan - Alken Adlandırma -->
+    <section class="section" id="alkan-alken">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Alkan &ndash; Alken Adlandırma</h2>
+                <p class="section-desc">Organik bilesiklerin IUPAC adlandırma kuralları</p>
+            </div>
+
+            <div class="content-grid">
+                <!-- Naming Rules -->
+                <div class="card card-full animate-on-scroll">
+                    <div class="card-header">
+                        <span class="card-icon">&#128218;</span>
+                        <h3>Adlandırma Kuralları</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="naming-rules">
+                            <div class="rule-step">
+                                <div class="rule-num">1</div>
+                                <div class="rule-text">
+                                    <h4>En Uzun Zinciri Bul</h4>
+                                    <p>Cift veya uclu bağı iceren en uzun karbon zincirini belirle. Bu ana zincirdir.</p>
+                                </div>
+                            </div>
+                            <div class="rule-step">
+                                <div class="rule-num">2</div>
+                                <div class="rule-text">
+                                    <h4>Numaralandır</h4>
+                                    <p>Cift/uclu bağa en yakın uctan numaralandırmaya basla.</p>
+                                </div>
+                            </div>
+                            <div class="rule-step">
+                                <div class="rule-num">3</div>
+                                <div class="rule-text">
+                                    <h4>Dal Gruplarını Adlandır</h4>
+                                    <p>Yan zincirdeki karbon sayısına gore adlandır (metil, etil, propil vb.).</p>
+                                </div>
+                            </div>
+                            <div class="rule-step">
+                                <div class="rule-num">4</div>
+                                <div class="rule-text">
+                                    <h4>Son Eki Belirle</h4>
+                                    <p>Alkan: <strong>-an</strong> | Alken: <strong>-en</strong> | Alkin: <strong>-in</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example 1: 4,4-Dibromo 2-metil hekzan -->
+                <div class="card animate-on-scroll">
+                    <div class="card-header">
+                        <span class="card-icon example-num">1</span>
+                        <h3>4,4-Dibromo 2-metil hekzan</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="example-box">
+                            <div class="molecule-display">
+                                <div class="molecule-structure">
+                                    <table class="structure-table">
+                                        <tr>
+                                            <td></td><td></td><td></td><td></td><td>Br</td><td></td><td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td><td></td><td></td><td></td><td>|</td><td></td><td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="carbon">CH<sub>3</sub></td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH</td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH<sub>2</sub></td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CBr</td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH<sub>2</sub></td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH<sub>3</sub></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td><td></td><td>|</td><td></td><td></td><td></td><td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td><td></td><td>CH<sub>3</sub></td><td></td><td></td><td></td><td></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="naming-breakdown">
+                                <span class="name-part loc">4,4-</span>
+                                <span class="name-part sub">Dibromo</span>
+                                <span class="name-part loc">2-</span>
+                                <span class="name-part sub">metil</span>
+                                <span class="name-part main">hekzan</span>
+                            </div>
+                            <div class="naming-explain">
+                                <p><strong>hekzan:</strong> 6 karbonlu ana zincir (tekli bağ)</p>
+                                <p><strong>2-metil:</strong> 2. karbonda metil (CH<sub>3</sub>) grubu</p>
+                                <p><strong>4,4-dibromo:</strong> 4. karbonda 2 tane brom atomu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example 2: 4-Kloro 2-metil heptan -->
+                <div class="card animate-on-scroll">
+                    <div class="card-header">
+                        <span class="card-icon example-num">2</span>
+                        <h3>4-Kloro 2-metil heptan</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="example-box">
+                            <div class="molecule-display">
+                                <div class="molecule-structure">
+                                    <table class="structure-table">
+                                        <tr>
+                                            <td class="pos-num">1</td>
+                                            <td></td>
+                                            <td class="pos-num">2</td>
+                                            <td></td>
+                                            <td class="pos-num">3</td>
+                                            <td></td>
+                                            <td class="pos-num">4</td>
+                                            <td></td>
+                                            <td class="pos-num">5</td>
+                                            <td></td>
+                                            <td class="pos-num">6</td>
+                                            <td></td>
+                                            <td class="pos-num">7</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="carbon">CH<sub>3</sub></td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH</td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH<sub>2</sub></td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH</td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH<sub>2</sub></td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH<sub>2</sub></td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH<sub>3</sub></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td><td></td>
+                                            <td>|</td><td></td><td></td><td></td>
+                                            <td>|</td><td></td><td></td><td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td><td></td>
+                                            <td>CH<sub>3</sub></td><td></td><td></td><td></td>
+                                            <td>Cl</td><td></td><td></td><td></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="naming-breakdown">
+                                <span class="name-part loc">4-</span>
+                                <span class="name-part sub">Kloro</span>
+                                <span class="name-part loc">2-</span>
+                                <span class="name-part sub">metil</span>
+                                <span class="name-part main">heptan</span>
+                            </div>
+                            <div class="naming-explain">
+                                <p><strong>heptan:</strong> 7 karbonlu ana zincir (tekli bağ)</p>
+                                <p><strong>2-metil:</strong> 2. karbonda metil (CH<sub>3</sub>) grubu</p>
+                                <p><strong>4-kloro:</strong> 4. karbonda klor atomu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example 3: 3,4-Dimetil 2-penten -->
+                <div class="card animate-on-scroll">
+                    <div class="card-header">
+                        <span class="card-icon example-num">3</span>
+                        <h3>3,4-Dimetil 2-penten</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="example-box">
+                            <div class="molecule-display">
+                                <div class="molecule-structure">
+                                    <table class="structure-table">
+                                        <tr>
+                                            <td class="pos-num">1</td>
+                                            <td></td>
+                                            <td class="pos-num">2</td>
+                                            <td></td>
+                                            <td class="pos-num">3</td>
+                                            <td></td>
+                                            <td class="pos-num">4</td>
+                                            <td></td>
+                                            <td class="pos-num">5</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="carbon">CH<sub>3</sub></td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH</td>
+                                            <td class="bond-d">=</td>
+                                            <td class="carbon">C</td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH</td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH<sub>3</sub></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td><td></td><td></td><td></td>
+                                            <td>|</td><td></td>
+                                            <td>|</td><td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td><td></td><td></td><td></td>
+                                            <td>CH<sub>3</sub></td><td></td>
+                                            <td>CH<sub>3</sub></td><td></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="naming-breakdown">
+                                <span class="name-part loc">3,4-</span>
+                                <span class="name-part sub">Dimetil</span>
+                                <span class="name-part loc">2-</span>
+                                <span class="name-part main">penten</span>
+                            </div>
+                            <div class="naming-explain">
+                                <p><strong>penten:</strong> 5 karbonlu ana zincir (cift bağ iceriyor &rarr; -en eki)</p>
+                                <p><strong>2-:</strong> Cift bağ 2. karbonda baslar</p>
+                                <p><strong>3,4-dimetil:</strong> 3. ve 4. karbonlarda birer metil grubu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example 4: 2,3-Dimetil 4-hekzen -->
+                <div class="card animate-on-scroll">
+                    <div class="card-header">
+                        <span class="card-icon example-num">4</span>
+                        <h3>2,3-Dimetil 4-hekzen</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="example-box">
+                            <div class="molecule-display">
+                                <div class="molecule-structure">
+                                    <table class="structure-table">
+                                        <tr>
+                                            <td class="pos-num">1</td>
+                                            <td></td>
+                                            <td class="pos-num">2</td>
+                                            <td></td>
+                                            <td class="pos-num">3</td>
+                                            <td></td>
+                                            <td class="pos-num">4</td>
+                                            <td></td>
+                                            <td class="pos-num">5</td>
+                                            <td></td>
+                                            <td class="pos-num">6</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="carbon">CH<sub>3</sub></td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH</td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH</td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH</td>
+                                            <td class="bond-d">=</td>
+                                            <td class="carbon">CH</td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH<sub>3</sub></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td><td></td>
+                                            <td>|</td><td></td>
+                                            <td>|</td><td></td>
+                                            <td></td><td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td><td></td>
+                                            <td>CH<sub>3</sub></td><td></td>
+                                            <td>CH<sub>3</sub></td><td></td>
+                                            <td></td><td></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="naming-breakdown">
+                                <span class="name-part loc">2,3-</span>
+                                <span class="name-part sub">Dimetil</span>
+                                <span class="name-part loc">4-</span>
+                                <span class="name-part main">hekzen</span>
+                            </div>
+                            <div class="naming-explain">
+                                <p><strong>hekzen:</strong> 6 karbonlu ana zincir (cift bağ iceriyor &rarr; -en eki)</p>
+                                <p><strong>4-:</strong> Cift bağ 4. karbonda baslar</p>
+                                <p><strong>2,3-dimetil:</strong> 2. ve 3. karbonlarda birer metil grubu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Alkin Adlandırma -->
+    <section class="section section-alt" id="alkin">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Alkin Adlandırma</h2>
+                <p class="section-desc">Uclu bağ iceren bilesiklerin IUPAC adlandırması</p>
+            </div>
+
+            <div class="content-grid">
+                <!-- Alkin Rules -->
+                <div class="card card-full animate-on-scroll">
+                    <div class="card-header">
+                        <span class="card-icon">&#128218;</span>
+                        <h3>Alkin Adlandırma Kuralları</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="info-list">
+                            <li>
+                                <span class="list-icon">&#10148;</span>
+                                <span>Uclu bağ iceren en uzun karbon zinciri secilir</span>
+                            </li>
+                            <li>
+                                <span class="list-icon">&#10148;</span>
+                                <span>Uclu bağa en yakın uctan numaralandırma yapılır</span>
+                            </li>
+                            <li>
+                                <span class="list-icon">&#10148;</span>
+                                <span>Son ek olarak <strong>&quot;-in&quot;</strong> kullanılır</span>
+                            </li>
+                            <li>
+                                <span class="list-icon">&#10148;</span>
+                                <span>Birden fazla uclu bağ varsa <strong>-diyin, -triyin</strong> seklinde belirtilir</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Example 1: 1-Pentin -->
+                <div class="card animate-on-scroll">
+                    <div class="card-header">
+                        <span class="card-icon example-num">1</span>
+                        <h3>1-Pentin</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="example-box">
+                            <div class="formula-display">
+                                <span class="formula-large">
+                                    CH&equiv;C&ndash;CH<sub>2</sub>&ndash;CH<sub>2</sub>&ndash;CH<sub>3</sub>
+                                </span>
+                            </div>
+                            <div class="naming-breakdown">
+                                <span class="name-part loc">1-</span>
+                                <span class="name-part main">Pentin</span>
+                            </div>
+                            <div class="naming-explain">
+                                <p><strong>pentin:</strong> 5 karbonlu ana zincir + uclu bağ (&rarr; -in eki)</p>
+                                <p><strong>1-:</strong> Uclu bağ 1. karbonda baslar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example 2: 1,3-Hekzadiyin -->
+                <div class="card animate-on-scroll">
+                    <div class="card-header">
+                        <span class="card-icon example-num">2</span>
+                        <h3>1,3-Hekzadiyin</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="example-box">
+                            <div class="formula-display">
+                                <span class="formula-large">
+                                    CH&equiv;C&ndash;C&equiv;C&ndash;CH<sub>2</sub>&ndash;CH<sub>3</sub>
+                                </span>
+                            </div>
+                            <div class="naming-breakdown">
+                                <span class="name-part loc">1,3-</span>
+                                <span class="name-part main">Hekzadiyin</span>
+                            </div>
+                            <div class="naming-explain">
+                                <p><strong>hekzadiyin:</strong> 6 karbonlu ana zincir + 2 tane uclu bağ (&rarr; -diyin eki)</p>
+                                <p><strong>1,3-:</strong> Uclu bağlar 1. ve 3. karbonlarda baslar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example 3: 3-Metil 1-butin -->
+                <div class="card animate-on-scroll">
+                    <div class="card-header">
+                        <span class="card-icon example-num">3</span>
+                        <h3>3-Metil 1-butin</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="example-box">
+                            <div class="molecule-display">
+                                <div class="molecule-structure">
+                                    <table class="structure-table">
+                                        <tr>
+                                            <td class="pos-num">1</td>
+                                            <td></td>
+                                            <td class="pos-num">2</td>
+                                            <td></td>
+                                            <td class="pos-num">3</td>
+                                            <td></td>
+                                            <td class="pos-num">4</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="carbon">CH</td>
+                                            <td class="bond-t">&equiv;</td>
+                                            <td class="carbon">C</td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH</td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH<sub>3</sub></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td><td></td><td></td><td></td>
+                                            <td>|</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td><td></td><td></td><td></td>
+                                            <td>CH<sub>3</sub></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="naming-breakdown">
+                                <span class="name-part loc">3-</span>
+                                <span class="name-part sub">Metil</span>
+                                <span class="name-part loc">1-</span>
+                                <span class="name-part main">butin</span>
+                            </div>
+                            <div class="naming-explain">
+                                <p><strong>butin:</strong> 4 karbonlu ana zincir + uclu bağ (&rarr; -in eki)</p>
+                                <p><strong>1-:</strong> Uclu bağ 1. karbonda baslar</p>
+                                <p><strong>3-metil:</strong> 3. karbonda metil grubu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example 4: 4-Metil 2-hekzin -->
+                <div class="card animate-on-scroll">
+                    <div class="card-header">
+                        <span class="card-icon example-num">4</span>
+                        <h3>4-Metil 2-hekzin</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="example-box">
+                            <div class="molecule-display">
+                                <div class="molecule-structure">
+                                    <table class="structure-table">
+                                        <tr>
+                                            <td class="pos-num">1</td>
+                                            <td></td>
+                                            <td class="pos-num">2</td>
+                                            <td></td>
+                                            <td class="pos-num">3</td>
+                                            <td></td>
+                                            <td class="pos-num">4</td>
+                                            <td></td>
+                                            <td class="pos-num">5</td>
+                                            <td></td>
+                                            <td class="pos-num">6</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="carbon">CH<sub>3</sub></td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">C</td>
+                                            <td class="bond-t">&equiv;</td>
+                                            <td class="carbon">C</td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH</td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH<sub>2</sub></td>
+                                            <td class="bond-h">&ndash;</td>
+                                            <td class="carbon">CH<sub>3</sub></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td><td></td><td></td><td></td><td></td><td></td>
+                                            <td>|</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td><td></td><td></td><td></td><td></td><td></td>
+                                            <td>CH<sub>3</sub></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="naming-breakdown">
+                                <span class="name-part loc">4-</span>
+                                <span class="name-part sub">Metil</span>
+                                <span class="name-part loc">2-</span>
+                                <span class="name-part main">hekzin</span>
+                            </div>
+                            <div class="naming-explain">
+                                <p><strong>hekzin:</strong> 6 karbonlu ana zincir + uclu bağ (&rarr; -in eki)</p>
+                                <p><strong>2-:</strong> Uclu bağ 2. karbonda baslar</p>
+                                <p><strong>4-metil:</strong> 4. karbonda metil grubu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="section" id="quiz">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Kendini Test Et</h2>
+                <p class="section-desc">Konuları ne kadar iyi oğrendiğini test et!</p>
+            </div>
+
+            <div class="quiz-container">
+                <div class="quiz-progress">
+                    <div class="quiz-progress-bar" id="quizProgressBar"></div>
+                </div>
+                <div class="quiz-score" id="quizScore">
+                    <span id="scoreText">0 / 5</span>
+                </div>
+
+                <div class="quiz-card" id="quizCard">
+                    <div class="quiz-question" id="quizQuestion"></div>
+                    <div class="quiz-options" id="quizOptions"></div>
+                    <button class="quiz-next-btn" id="quizNextBtn" style="display:none;">Sonraki Soru &#8594;</button>
+                </div>
+
+                <div class="quiz-result" id="quizResult" style="display:none;">
+                    <div class="result-icon" id="resultIcon"></div>
+                    <h3 id="resultTitle"></h3>
+                    <p id="resultText"></p>
+                    <button class="quiz-restart-btn" id="quizRestart">Tekrar Dene</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Yukarı Git">&#8679;</button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">&#9883;</span>
+                    <span class="logo-text">Kimya<span class="accent">12</span></span>
+                </div>
+                <div class="footer-info">
+                    <p>12. Sinif &bull; 2. Donem &bull; 1. Yazili Sinav Calisma Notlari</p>
+                    <p class="footer-topics">Hibritleşme &bull; Sigma-Pi Bağları &bull; Alkan-Alken Adlandırma &bull; Alkin Adlandırma</p>
+                </div>
+                <div class="footer-bottom">
+                    <p class="footer-credit">Made by Mek</p>
+                    <p class="footer-year">&copy; 2026</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Install PWA Banner -->
+    <div class="pwa-install-banner" id="pwaInstallBanner" style="display:none;">
+        <div class="pwa-install-content">
+            <span class="pwa-icon">&#128242;</span>
+            <div class="pwa-text">
+                <strong>Uygulamayi Yukle</strong>
+                <p>Cevrimdisi erisim icin cihazına yukle</p>
+            </div>
+            <button class="pwa-install-btn" id="pwaInstallBtn">Yukle</button>
+            <button class="pwa-dismiss-btn" id="pwaDismissBtn">&times;</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
